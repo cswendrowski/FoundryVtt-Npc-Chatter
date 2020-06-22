@@ -1,4 +1,5 @@
 ![](https://img.shields.io/badge/Foundry-v0.6.2-informational)
+[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
 
@@ -12,6 +13,20 @@ Chatter is displayed as ChatBubbles only, and won't dump to the Chat Log.
 I recommend you turn off the Core "Pan to Token Speaker" setting or else risk whiplash.
 
 ![](npc-chatter.gif)
+
+# Installation
+
+## FoundryGet
+
+Using [FoundryGet](https://github.com/cswendrowski/foundryget)
+
+```
+foundryget install https://raw.githubusercontent.com/cswendrowski/FoundryVtt-Npc-Chatter/master/module.json
+```
+
+## Foundry
+
+
 
 # Setup
 
