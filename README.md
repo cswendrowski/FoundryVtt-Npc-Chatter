@@ -11,6 +11,8 @@ Chatter is displayed as ChatBubbles only, and won't dump to the Chat Log.
 
 I recommend you turn off the Core "Pan to Token Speaker" setting or else risk whiplash.
 
+![](npc-chatter.gif)
+
 # Setup
 
 Given a set of Villagers named "Villager A", "Villager B", and "Villager C", setup a "Villager Chatter" roll table or a "Villager" table under a Folder named "NPC Chatter".
@@ -18,6 +20,8 @@ Given a set of Villagers named "Villager A", "Villager B", and "Villager C", set
 This roll table will need at least one option and a dice roll configured to work.
 
 If "Villager A" has specific dialogue that might trigger on top of the generic Villager chatter, add another "Villager A Chatter" table (or "Villager A" in the "NPC Chatter folder) and it will draw from that as well.
+
+![](chattertablesetup.PNG)
 
 # Usage
 
