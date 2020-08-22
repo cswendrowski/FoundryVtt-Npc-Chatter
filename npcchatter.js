@@ -9,7 +9,7 @@ class NpcChatter {
   }
 
   randomGlobalChatterEvery(milliseconds) {
-    window.setInterval(() => { game.npcChatter.globalChatter(); }, milliseconds);
+    NpcChatter.timer = window.setInterval(() => { game.npcChatter.globalChatter(); }, milliseconds);
   }
 
   async globalChatter() {
