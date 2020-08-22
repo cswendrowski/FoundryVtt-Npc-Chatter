@@ -1,4 +1,6 @@
 class NpcChatter {
+  
+  static timer;
 
   getChatterTables() {
     var chatterFolder =game.folders.entities.filter(x => x.type == "RollTable" && x.name.toLowerCase() == "npc chatter")[0];
@@ -64,6 +66,11 @@ class NpcChatter {
 
     var result = table.roll().results[0].text;
     await canvas.hud.bubbles.say(token, result, false);
+  }
+  
+  async turnOffGlobalTimerChatter() {
+	  window.clearInterval(NpcChatter.timer);
+	  NpcChatter.timer = undefined;
   }
 }
 
