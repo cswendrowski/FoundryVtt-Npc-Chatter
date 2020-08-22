@@ -2,10 +2,10 @@
   "name": "npc-chatter",
   "title": "NPC Chatter",
   "description": "Your NPCs have things to say",
-  "semanticVersion": "1.0.0",
-  "version": "0.1.0",
+  "semanticVersion": "1.1.0",
+  "version": "1.1.0",
   "minimumCoreVersion": "0.6.2",
-  "compatibleCoreVersion": "0.6.2",
+  "compatibleCoreVersion": "0.7.1",
   "author": "Cody Swendrowski <cody@swendrowski.us>",
   "scripts": [
     "./npcchatter.js"
