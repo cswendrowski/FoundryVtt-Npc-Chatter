@@ -70,6 +70,15 @@ Every interval as measured in milliseconds, executes `globalChatter()`.
 randomGlobalChatterEvery(milliseconds)
 ```
 
+
+## Disable Global Chatter
+
+Clears out the timer on `randomGlobalChatterEvery`
+
+```js
+turnOffGlobalTimerChatter()
+```
+
 ## Token Chatter
 
 Given a `Token`, tries to find a matching Chatter Table. If none, exits. If one or more, randomly picks one and displays a rolled result from it as a ChatBubble.
