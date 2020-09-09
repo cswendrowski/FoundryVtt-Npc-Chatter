@@ -46,9 +46,7 @@ The easiest macro is the "Timed Global Chatter" macro - just slap it when a Scen
 
 ## Trigger Happy
 
-[Trigger Happy](https://github.com/kakaroto/fvtt-module-trigger-happy) can trigger NPC chatter as well. Here's two examples to get you started:
-
-On Scene Load, start Timed Global Chatter: `@Scene[Village ground level] @Macro[xSKCgl6katupNxCx]{Timed Global Chatter}`
+[Trigger Happy](https://github.com/kakaroto/fvtt-module-trigger-happy) can trigger NPC chatter as well. Here's an example to get you started:
 
 When an Actor walks into a Room (defined by an invisble actor), have a specific Token chatter: `@Actor[TriggerA] @Macro[OXyjmVhEGo3eTaJz]{Specific Token Chatter}`
 
