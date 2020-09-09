@@ -29,7 +29,13 @@ class NpcChatter {
     var tokenIndex = Math.floor((Math.random() * eligableTokens.length) + 0);
     var token = eligableTokens[tokenIndex];
 
+    if (token == undefined) return;
+
     var result = table.roll().results[0].text;
+    game.socket.emit("module.npc-chatter", {
+      tokenId: token.id,
+      msg: result
+    });
     await canvas.hud.bubbles.say(token, result, false);
   }
 
@@ -44,6 +50,10 @@ class NpcChatter {
     var table = eligableTables[tableIndex];
 
     var result = table.roll().results[0].text;
+    game.socket.emit("module.npc-chatter", {
+      tokenId: token.id,
+      msg: result
+    });
     await canvas.hud.bubbles.say(token, result, false);
   }
 
@@ -65,6 +75,10 @@ class NpcChatter {
     var token = eligableTokens[tokenIndex];
 
     var result = table.roll().results[0].text;
+    game.socket.emit("module.npc-chatter", {
+      tokenId: token.id,
+      msg: result
+    });
     await canvas.hud.bubbles.say(token, result, false);
   }
   
@@ -77,6 +91,13 @@ class NpcChatter {
 Hooks.once('ready', async function() {
   game.npcChatter = new NpcChatter();
   console.log("Npc Chatter is now ready");
+
+  game.socket.on("module.npc-chatter", async (toShow) => {
+    //console.log("Got token " + toShow.tokenId + " with text " + toShow.msg);
+    let token = canvas.tokens.get(toShow.tokenId);
+    //console.log(token);
+    canvas.hud.bubbles.say(token, toShow.msg, false);
+  });
 });
 
 Hooks.on('chatBubble', async function(callerData, html, text, emote) {
