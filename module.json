@@ -2,10 +2,10 @@
   "name": "npc-chatter",
   "title": "NPC Chatter",
   "description": "Your NPCs have things to say",
-  "semanticVersion": "2.0.0",
-  "version": "2.0.0",
+  "semanticVersion": "2.0.1",
+  "version": "2.0.1",
   "minimumCoreVersion": "0.6.2",
-  "compatibleCoreVersion": "0.7.2",
+  "compatibleCoreVersion": "0.7.4",
   "author": "Cody Swendrowski <cody@swendrowski.us>",
   "scripts": [
     "./npcchatter.js"
@@ -23,5 +23,5 @@
   ],
   "url": "https://github.com/cswendrowski/FoundryVtt-Npc-Chatter",
   "manifest": "https://raw.githubusercontent.com/cswendrowski/FoundryVtt-Npc-Chatter/master/module.json",
-  "download": "https://github.com/cswendrowski/FoundryVtt-Npc-Chatter/releases/download/v2.0.0/npcchatter.zip"
+  "download": "https://github.com/cswendrowski/FoundryVtt-Npc-Chatter/releases/download/v2.0.1/npcchatter.zip"
 }

@@ -33,7 +33,7 @@ class NpcChatter {
 
     var result = table.roll().results[0].text;
     game.socket.emit("module.npc-chatter", {
-      tokenId: token.id,
+      tokenId: token._id,
       msg: result
     });
     await canvas.hud.bubbles.say(token, result, false);
@@ -51,7 +51,7 @@ class NpcChatter {
 
     var result = table.roll().results[0].text;
     game.socket.emit("module.npc-chatter", {
-      tokenId: token.id,
+      tokenId: token._id,
       msg: result
     });
     await canvas.hud.bubbles.say(token, result, false);
