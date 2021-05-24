@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Foundry-v0.6.2-informational)
+![](https://img.shields.io/badge/Foundry-v0.8.5-informational)
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
