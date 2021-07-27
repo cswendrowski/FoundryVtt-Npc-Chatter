@@ -39,7 +39,7 @@ class NpcChatter {
     await canvas.hud.bubbles.say(token.data, result, false);
   }
 
-  async tokenChatter(token) {
+  async tokenChatter(token, options={}) {
     const tables = this.getChatterTables();
 
     const eligableTables = tables.filter(x => token.name.toLowerCase().includes(x.name.toLowerCase().replace("chatter", "").trim()));
@@ -54,7 +54,8 @@ class NpcChatter {
       tokenId: token.data._id,
       msg: result
     });
-    await canvas.hud.bubbles.say(token.data, result, false);
+    let emote = Object.keys(options).length ? {emote: options} : false;
+    await canvas.hud.bubbles.say(token.data, result, emote);
   }
 
   async selectedChatter() {
