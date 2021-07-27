@@ -8,11 +8,11 @@ class NpcChatter {
     return tables;
   }
 
-  randomGlobalChatterEvery(milliseconds) {
-    NpcChatter.timer = window.setInterval(() => { game.npcChatter.globalChatter(); }, milliseconds);
+  randomGlobalChatterEvery(milliseconds, options={}) {
+    NpcChatter.timer = window.setInterval(() => { game.npcChatter.globalChatter(options); }, milliseconds);
   }
 
-  async globalChatter() {
+  async globalChatter(options={}) {
     const tables = this.getChatterTables();
 
     const userCharacterActorIds = game.users.contents.filter(x => x.character).map(x => x.character.id);
@@ -36,7 +36,8 @@ class NpcChatter {
       tokenId: token.data._id,
       msg: result
     });
-    await canvas.hud.bubbles.say(token.data, result, false);
+    const emote = Object.keys(options).length ? {emote: options} : false;
+    await canvas.hud.bubbles.say(token.data, result, emote);
   }
 
   async tokenChatter(token, options={}) {
@@ -54,11 +55,11 @@ class NpcChatter {
       tokenId: token.data._id,
       msg: result
     });
-    let emote = Object.keys(options).length ? {emote: options} : false;
+    const emote = Object.keys(options).length ? {emote: options} : false;
     await canvas.hud.bubbles.say(token.data, result, emote);
   }
 
-  async selectedChatter() {
+  async selectedChatter(options={}) {
     const tables = this.getChatterTables();
 
     const npcTokens = canvas.tokens.controlled;
@@ -80,7 +81,8 @@ class NpcChatter {
       tokenId: token.id,
       msg: result
     });
-    await canvas.hud.bubbles.say(token, result, false);
+    const emote = Object.keys(options).length ? {emote: options} : false;
+    await canvas.hud.bubbles.say(token, result, emote);
   }
   
   async turnOffGlobalTimerChatter() {
