@@ -48,13 +48,13 @@ The easiest macro is the "Timed Global Chatter" macro - just slap it when a Scen
 
 [Trigger Happy](https://github.com/kakaroto/fvtt-module-trigger-happy) can trigger NPC chatter as well. Here's an example to get you started:
 
-When an Actor walks into a Room (defined by an invisble actor), have a specific Token chatter: `@Actor[TriggerA] @Macro[OXyjmVhEGo3eTaJz]{Specific Token Chatter}`
+When an Actor walks into a Room (defined by an invisible actor), have a specific Token chatter: `@Actor[TriggerA] @Macro[OXyjmVhEGo3eTaJz]{Specific Token Chatter}`
 
 # API
 
 ## Global Chatter
 
-Picks a random Chatter Table belonging to a random Actor on the first active scene and displays a ChatBubble with rolled Text off of the random Chatter Table.
+Picks a random Chatter Table belonging to a random Actor on the first active Scene and displays a ChatBubble with rolled Text off of the random Chatter Table.
 
 ```js
 async globalChatter()
@@ -87,7 +87,7 @@ async tokenChatter(token)
 
 ## Selected Chatter
 
-Grabs the currently selected Tokens and tries to find matching Chatter Tables. If none, exits. If one or more, randomly picks one and an elibable Token and displays a rolled result from the Table as a ChatBubble.
+Grabs the currently selected Tokens and tries to find matching Chatter Tables. If none, exits. If one or more, randomly picks one and an eligible Token and displays a rolled result from the Table as a ChatBubble.
 
 ```js
   async selectedChatter()
